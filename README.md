@@ -19,3 +19,6 @@ Project ini untuk membaca nilai tegangan, arus, dan intensitas matahari yang di 
 
 
 ![puss image](/image/puss-image.png)
+<img src="/image/puss-image.png" width=150>
+<img src="/image/puss-image.png" width=100>
+<img src="/image/puss-image.png" width=50>

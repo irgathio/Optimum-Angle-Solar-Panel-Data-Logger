@@ -12,6 +12,10 @@ Project ini untuk membaca nilai tegangan, arus, dan intensitas matahari yang di 
   * Led
   * Ressitor 1 K ohm
   * Buzzer
+  * Module RTC
+  * Module SD CARD
   * Solar Panels
   * 12 V Light Fitting (As load voltage depending on the type of solar panel capacity you have)
 
+
+![puss image](./image/pus text image.png)

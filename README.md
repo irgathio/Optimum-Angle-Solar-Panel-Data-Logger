@@ -18,4 +18,4 @@ Project ini untuk membaca nilai tegangan, arus, dan intensitas matahari yang di 
   * 12 V Light Fitting (As load voltage depending on the type of solar panel capacity you have)
 
 
-![puss image](./image/pus text image.png)
+![puss image](/image/puss-image.png)

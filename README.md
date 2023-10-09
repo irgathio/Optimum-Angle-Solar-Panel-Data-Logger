@@ -79,7 +79,7 @@ LED         | GPIO 4
    0x44 untuk alamat jika A1 di Short (Soldering pada A1)<br>
    0x45 untuk alamat jika A0 di Short dan A1 di Short (Soldering pada A0 dan Soldering pada A1)<br>
 
- ### Address INA219
+ ### *Address INA219*
    The INA219 module uses I2C communication, this project uses 4 modules so the way to change each address is by soldering the module. 
    To find out the model address, see the main code, namely:
    ```

@@ -1,3 +1,10 @@
+/*
+  Author        : Irga (irgathio@gmail.com)
+  Modified Time : October 2023
+*/
+
+
+
 //SD Card-----------------
 #include "FS.h"
 #include "SD.h"
@@ -25,7 +32,6 @@ byte jam = 9;
 byte menit = 0;
 byte detik = 0;
 
-
 //INA219-----------------
 Adafruit_INA219 INA219_1 (0x40); // -
 Adafruit_INA219 INA219_2 (0x41); // A0 short
@@ -37,11 +43,9 @@ float tegangan_2, arus_2;
 float tegangan_3, arus_3;
 float tegangan_4, arus_4;
 
-
 //LUX------------------------
 BH1750 lightMeter(0x23);
 float lux;
-
 
 //Buzzer-------------------
 #define Buzzer_pin 12
@@ -52,13 +56,13 @@ float lux;
 
 void setup() {
 
-  // Start serial communication for debugging purposes
+  // Start serial communication
   Serial.begin(9600);
 
   //buzzer-------------------------------------------
   pinMode (Buzzer_pin, OUTPUT);
 
-  //Led
+  //Led---------------------------------------------
   pinMode (LED, OUTPUT);
 
   //SD CARD--------------------------------------------
@@ -66,19 +70,19 @@ void setup() {
   SD.begin(SD_CS);
   if (!SD.begin(SD_CS)) {
     Serial.println("Card Mount Failed");
-    digitalWrite (LED, HIGH);
+    digitalWrite (LED, HIGH); //if there is a problem the LED will be ON
     return;
   }
   uint8_t cardType = SD.cardType();
   if (cardType == CARD_NONE) {
     Serial.println("No SD card attached");
-    digitalWrite (LED, HIGH);
+    digitalWrite (LED, HIGH); //if there is a problem the LED will be ON
     return;
   }
   Serial.println("Initializing SD card...");
   if (!SD.begin(SD_CS)) {
     Serial.println("ERROR - SD card initialization failed!");
-    digitalWrite (LED, HIGH);
+    digitalWrite (LED, HIGH); //if there is a problem the LED will be ON
     return;    // init failed
   }
 
@@ -101,7 +105,7 @@ void setup() {
   //RTC--------------------------------------
   if (! rtc.begin()) {
     Serial.println("Couldn't find RTC");
-    digitalWrite (LED, HIGH);
+    digitalWrite (LED, HIGH); //if there is a problem the LED will be ON
     Serial.flush();
     while (1) delay(10);
   }
@@ -117,16 +121,16 @@ void setup() {
     Serial.println(F("BH1750 Advanced begin"));
   } else {
     Serial.println(F("Error initialising BH1750"));
-    digitalWrite (LED, HIGH);
+    digitalWrite (LED, HIGH); //if there is a problem the LED will be ON
   }
 
   delay (3000);
   digitalWrite (LED, LOW);
 
-  //CEK WAKTU SAAT SET UP----------------------------------
+  //CHECK THE TIME WHEN SET UP----------------------------------
   //DateTime now = rtc.now();
   DateTime now = rtc.now() + TimeSpan(0, 0, 0, 16);
-  //jika terjadi perbedaan waktu real
+  //If there is a time difference after setting, you can use TimeSpan to synchronize
 
   tahun = now.year();
   bulan = now.month();
@@ -205,7 +209,7 @@ void ina219_sensor() {
   Serial.print("\t\tArus 4 : ");  Serial.print(arus_4);      Serial.print(" mA\n\n");
 
   if (tegangan_1 == 32.76 || tegangan_2 == 32.76 || tegangan_3 == 32.76 || tegangan_4 == 32.76 ){
-    digitalWrite (LED, HIGH);
+    digitalWrite (LED, HIGH); //if there is a problem the LED will be ON
   } 
 }
 
@@ -223,7 +227,7 @@ void lux_sensor() {
 void RTC_Time () {
   //DateTime now = rtc.now();
   DateTime now = rtc.now() + TimeSpan(0, 0, 0, 16);
-  //jika terjadi perbedaan waktu real
+  //If there is a time difference after setting, you can use TimeSpan to synchronize
 
   tahun = now.year();
   bulan = now.month();

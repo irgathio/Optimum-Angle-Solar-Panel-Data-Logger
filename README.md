@@ -96,7 +96,7 @@ LED         | GPIO 4
   
 
 ## Cara Kerja Perangkat  <br> *How the Device Works*
-<img src="/image/Blok-Diagram-Optimum-Angle-Solar-Panel-Data-Logger.png" width=750> 
+<img src="/image/Blok-Diagram-Optimum-Angle-Solar-Panel-Data-Logger2.png" width=750> 
 
 Terdapat 4 Panel Surya sudah di atur dengan sudut yang berbeda-beda (nilai sudut di sini kebebasan kalian sesuai project yang akan kalian lakukan). Masing-Masing Panel terdapat Beban sebuah lampu, fungsi beban ini berguna untuk menentukan nilai Daya yang di hasilkan oleh Panel Surya. Terdapat 4 Sensor INA219 yang akan membaca nilai Tegangan dan Arus untuk setiap Panel Surya. Lux BH1750 akan membaca Intenstas cahaya matahari. <br>
 

@@ -6,16 +6,26 @@ Project ini untuk membaca nilai tegangan, arus, dan intensitas matahari yang di 
 
 
 ## Berikut ini Perangkat yang diperlukan <br> *The following devices are required:*
-  * ESP 32
+  * ESP 32 DevKit V1 DOIT
   * Sensor INA 219 
   * Sensor Lux BH1750
   * Led
   * Ressitor 1 K ohm
   * Buzzer
-  * Module RTC
-  * Module SD CARD
+  * Module RTC DS3231
+  * Module Micro SD CARD Reader Writer
   * Solar Panels
   * 12 V Light Fitting (As load voltage depending on the type of solar panel capacity you have)
+
+## Berikut ini Library yang digunakan <br> *The following libraries are used:*
+  * RTClib
+  * BH1750
+  * Adafruit INA219
+
+## Skematik Pengkabelan <br> *Wiring Schematic*
+
+
+## Cara Kerja Perangkat  <br> *How the Device Works*
 
 
 ![puss image](/image/puss-image.png)

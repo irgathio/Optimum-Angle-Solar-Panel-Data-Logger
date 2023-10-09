@@ -23,7 +23,7 @@ Project ini untuk membaca nilai tegangan, arus, dan intensitas matahari yang di 
   * Adafruit INA219
 
 ## Skematik Pengkabelan <br> *Wiring Schematic*
-
+<img src="image/Optimum-Angle-Solar-Panel-Data-Logger.png" width=750>
 
 ## Cara Kerja Perangkat  <br> *How the Device Works*
 
